@@ -117,7 +117,7 @@ Original synthetic generator seed: 20261018. Patient-disjoint split: 80 train, 2
 
 ## Deployment
 
-GitHub Pages publishes the committed `docs/` folder on main. `npm run build` copies the static `dist/` tree to that folder. The Pages site has no server, secrets or shared database.
+The public release publishes a flat static frontend from main / (root). The complete source package includes a `docs/` export for other branch-based deployments. `npm run build` copies the static `dist/` tree to that folder. The Pages site has no server, secrets or shared database.
 
 A backend deployment requires a Node 24 service with persistent disk. `render.yaml` is a deployment blueprint for a paid persistent-disk service; **it has not been provisioned, purchased or deployed**. You may use another suitable Node host. Set APP_ORIGIN to the exact HTTPS origin, DB_PATH to persistent storage, HOST to 0.0.0.0 on the hosted service, and configure private STAFF_INVITES. Do not use ephemeral storage for persistent accounts. Serve the UI and API from the same origin. No hosting credentials are included.
 
