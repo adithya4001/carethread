@@ -1,0 +1,1 @@
+{"name": "carethread", "version": "2.0.0", "private": true, "type": "module", "scripts": {"start": "node bootstrap.mjs start", "test": "node bootstrap.mjs test", "build": "node bootstrap.mjs build"}, "engines": {"node": ">=24"}}

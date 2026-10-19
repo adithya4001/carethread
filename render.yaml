@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: carethread
+    runtime: node
+    plan: starter
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: carethread-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: DB_PATH
+        value: /var/data/carethread.sqlite
+      - key: APP_ORIGIN
+        sync: false
+      - key: STAFF_INVITES
+        sync: false
